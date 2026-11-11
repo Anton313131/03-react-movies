@@ -1,0 +1,24 @@
+.app {
+  padding: 0 16px;
+}
+
+.attribution {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 16px;
+  color: #555;
+  font-size: 12px;
+}
+
+.attribution img {
+  flex-shrink: 0;
+  height: auto;
+}
+
+.attribution p {
+  margin: 0;
+}
