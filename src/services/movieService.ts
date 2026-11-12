@@ -1,6 +1,10 @@
 import axios from "axios";
 import type { Movie } from "../types/movie";
 
+interface MovieSearchResponse {
+  results: Movie[];
+}
+
 function isMovie(value: unknown): value is Movie {
   return (
     typeof value === "object" &&
@@ -31,7 +35,7 @@ export async function fetchMovies(
     throw new Error("Missing TMDB access token");
   }
 
-  const { data } = await axios.get<unknown>(
+  const { data } = await axios.get<MovieSearchResponse>(
     "https://api.themoviedb.org/3/search/movie",
     {
       params: { query },
